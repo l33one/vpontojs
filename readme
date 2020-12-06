@@ -1,0 +1,23 @@
+npm init -y #cria o package-json
+dependencias
+npm install express #microframwork para rotas e views
+
+#iniciar o server
+node server.js
+
+#nodemon para reiniciar o servidor sempre que alterar o codigo
+    npm install -D nodemon
+    # adicionar no package.json "dev": "nodemon server.js"
+    # inicilizar npm run dev
+
+# criando docker do banco de dados
+    docker run --name vpontojs-db -e MYSQL_ROOT_PASSWORD=vPonto@1220! -v "/home/leewan/Documentos/projetos/vpontojs/database":/var/lib/mysql -p 0.0.0.0:3306:3306 --ip=172.17.0.7 -d mysql/mysql-server
+
+# dependencia banco de dados
+    npm install --save sequelize
+    npm install --save mysql2
+    npx sequelize init
+
+npm install require-dir
+npm install mongoose-paginate
+npm install cors  #permitir acessos de outros dominios
